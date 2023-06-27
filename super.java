@@ -10,7 +10,10 @@ class Device{
 
 class Tv extends Device{
 	Tv(){
-		super();// calls super class constructor
+		super();
+		/* calls super class constructor  
+		 * it should only be called from child class constructor and should be first statement in child class constructor)
+		 */
 		System.out.println("i am child class constructor");
 	}
 	String n="Tv";
