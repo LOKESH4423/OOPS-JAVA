@@ -12,17 +12,17 @@ public class ClassesAndObjects {
 	public static void main(String[] args) {
 		ClassesAndObjects obj= new ClassesAndObjects();
 		ClassesAndObjects obj1=new ClassesAndObjects();
-		System.out.println(obj.a);
-		System.out.println(obj.b);
-		System.out.println(a);
-//		System.out.println(b);//error instance variables cannot be accessed without object
-		System.out.println(ClassesAndObjects.a);
-//		System.out.println(ClassesAndObjects.b);//cannot access instance variables
-		obj.fun();
-		obj.fun1();
-		fun();
-//		fun1();//error instance methods cannot be accessed without object
-		ClassesAndObjects.fun();
+		System.out.println(obj.a);// 10
+		System.out.println(obj.b);// 20
+		System.out.println(a);// 10
+//		System.out.println(b);// error instance variables cannot be accessed without object
+		System.out.println(ClassesAndObjects.a);// 10
+//		System.out.println(ClassesAndObjects.b);// cannot access instance variables
+		obj.fun();// static
+		obj.fun1();// instance
+		fun();// static
+//		fun1();// error instance methods cannot be accessed without object
+		ClassesAndObjects.fun();// static
 //		ClassesAndObjects.fun1();//cannot access instance methods
 		
 		
@@ -35,13 +35,9 @@ public class ClassesAndObjects {
 		
 		obj.a=100;
 		obj.b=200;
-		System.out.println(obj.a);//100
-		System.out.println(obj.b);//200
-		System.out.println(obj1.a);//100
-		System.out.println(obj1.b);//20
-		
-		
-		
+		System.out.println(obj.a);// 100
+		System.out.println(obj.b);// 200
+		System.out.println(obj1.a);// 100
+		System.out.println(obj1.b);// 20
 	}
-
 }
