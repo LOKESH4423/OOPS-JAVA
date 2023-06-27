@@ -1,4 +1,5 @@
-//compile-time polymorphism
+//compile-time polymorphism -> MethodOverloading and MethodHiding
+//run-time polymorphism -> MethodOverriding
 
 public class MethodOverloading {
 	static int add(int a,int b) {
@@ -20,15 +21,36 @@ public class MethodOverloading {
 }
 
 
-public class MethodHiding{
-	
+
+
+
+
+class Animal{
+	static void run1() {
+		System.out.println("Animal1");
+	}
+	void run2() {
+		System.out.println("Animal2");
+	}
 }
-
-
-
-//run-time polymorphism
-
-
-public class MethodOverriding{
-	
+class Cheetah extends Animal{
+	static void run1() {
+		System.out.println("Cheetah1");
+	}
+	void run2() {
+		System.out.println("Cheetah2");
+	}
+}
+public class MethodOverriding {
+	public static void main(String[] args) {
+		Animal a = new Animal();
+		Cheetah c = new Cheetah();
+		Animal ac = new Cheetah();
+		a.run1();// Animal1
+		a.run2();//Animal2
+		c.run1();// Cheetah1
+		c.run2();// Cheetah2
+		ac.run1();// Animal1 // methodhiding // takes reference(animal)
+		ac.run2();// Cheetah2 // methodoverriding // takes runtime-object(cheetah)
+	}
 }
