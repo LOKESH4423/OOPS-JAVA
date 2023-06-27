@@ -1,4 +1,6 @@
-public class methodOverloading {
+//compile-time polymorphism
+
+public class MethodOverloading {
 	static int add(int a,int b) {
 		return a+b;
 	}
@@ -15,4 +17,18 @@ public class methodOverloading {
 		System.out.println(add(1.1,2.8,3.1));// 7.0
 
 	}
+}
+
+
+public class MethodHiding{
+	
+}
+
+
+
+//run-time polymorphism
+
+
+public class MethodOverriding{
+	
 }
